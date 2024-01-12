@@ -84,6 +84,8 @@ nav{
     gap: 3rem;
     text-shadow: 0.5px 0.5px;
     font-size: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 @media (max-width: 990px) {
@@ -230,7 +232,8 @@ header .content h1{
   margin-bottom: 1rem;
   font-size: 3.5rem;
   font-weight: 700;
-  line-height: 5rem;    
+  line-height: 5rem;
+
 }
 
 header .image{
@@ -369,6 +372,7 @@ header .content h1 .ffs-blur:hover{
 }
 
 .scroll1{
+  position: relative;
   min-height: 100vh;
 }
 
@@ -475,6 +479,23 @@ section{
   }
   .main-image{
     width: 430px;
+    height: 150px;
+    place-self: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-projects{
+    font-size: 3.5rem;
+  }
+  .header-projects::after{
+    width: 300px;
+  }
+  .box-grid{
+    grid-template-columns: repeat(1,minmax(0,1fr));
+  }
+  .main-image{
+    width: 380px;
     height: 150px;
     place-self: center;
   }
@@ -721,33 +742,6 @@ section{
    }
 }
 
-@media screen and (max-width: 640px) {
-  #slide1:checked ~ #controls label:nth-child(2),
-  #slide2:checked ~ #controls label:nth-child(3),
-  #slide3:checked ~ #controls label:nth-child(4),
-  #slide4:checked ~ #controls label:nth-child(5),
-  #slide5:checked ~ #controls label:nth-child(6),
-  #slide6:checked ~ #controls label:nth-child(7),
-  #slide7:checked ~ #controls label:nth-child(8),
-  #slide8:checked ~ #controls label:nth-child(1),
-  #slide1:checked ~ #controls label:nth-last-child(1),
-  #slide2:checked ~ #controls label:nth-last-child(8),
-  #slide3:checked ~ #controls label:nth-last-child(7),
-  #slide4:checked ~ #controls label:nth-last-child(6),
-  #slide5:checked ~ #controls label:nth-last-child(5),
-  #slide6:checked ~ #controls label:nth-last-child(4),
-  #slide7:checked ~ #controls label:nth-last-child(3),
-  #slide8:checked ~ #controls label:nth-last-child(2) {
-    background-size: 40px;
-    margin: 0;
-   }
-   #controls {
-   margin-left: auto;
-   padding: 1rem;
-   top: 1.5rem;
-  }
-}
-
 @media screen and (max-width: 700px) {
   #slide1:checked ~ #controls label:nth-child(2),
   #slide2:checked ~ #controls label:nth-child(3),
@@ -772,6 +766,33 @@ section{
    margin-left: 0.2rem;
    padding: 1rem;
    bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(3),
+  #slide3:checked ~ #controls label:nth-child(4),
+  #slide4:checked ~ #controls label:nth-child(5),
+  #slide5:checked ~ #controls label:nth-child(6),
+  #slide6:checked ~ #controls label:nth-child(7),
+  #slide7:checked ~ #controls label:nth-child(8),
+  #slide8:checked ~ #controls label:nth-child(1),
+  #slide1:checked ~ #controls label:nth-last-child(1),
+  #slide2:checked ~ #controls label:nth-last-child(8),
+  #slide3:checked ~ #controls label:nth-last-child(7),
+  #slide4:checked ~ #controls label:nth-last-child(6),
+  #slide5:checked ~ #controls label:nth-last-child(5),
+  #slide6:checked ~ #controls label:nth-last-child(4),
+  #slide7:checked ~ #controls label:nth-last-child(3),
+  #slide8:checked ~ #controls label:nth-last-child(2) {
+    background-size: 40px;
+    margin: 0;
+   }
+   #controls {
+   margin-left: auto;
+   padding: 1rem;
+   top: 1.5rem;
   }
 }
 /* Certificate slider end-line */
