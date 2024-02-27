@@ -399,6 +399,7 @@ header .content h1 .ffs-blur:hover {
 .project-content .image-content {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 section {
